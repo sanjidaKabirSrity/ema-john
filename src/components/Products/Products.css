@@ -1,0 +1,25 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid rgb(199, 197, 197);
+    margin: 10px;
+}
+.img{
+    padding: 20px;
+}
+.name{
+    color: blue;
+    font-size: 18px;
+}
+.price{
+    color: indigo;
+    font-size: 18px;
+}
+.btn{
+    color: black;
+    background-color: rgb(240, 174, 52);
+    border: 1px solid gray;
+    margin-top: 20px;
+    padding: 4px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}

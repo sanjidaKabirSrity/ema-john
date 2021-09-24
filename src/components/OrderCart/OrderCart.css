@@ -1,0 +1,34 @@
+.order-cart{
+    padding: 20px 40px 20px 10px;
+}
+.order-title{
+    text-align: center;
+}
+.price-calc{
+    display: flex;
+    justify-content: space-between;
+}
+.items-order{
+    font-size: 16px;
+}
+small{
+    display: block;
+}
+.total{
+    color: rgb(179, 3, 3);
+    font-size: 17px;
+    margin: 5px 0px;
+    font-weight: 600;
+}
+.order-btns{
+    text-align: center;
+}
+.order-btn{
+    color: black;
+    background-color: rgb(240, 174, 52);
+    border: 1px solid gray;
+    margin-top: 20px;
+    padding: 4px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
