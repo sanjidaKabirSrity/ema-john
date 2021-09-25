@@ -10,6 +10,10 @@
     color: blue;
     font-size: 18px;
 }
+.product-customize{
+    display: flex;
+    justify-content: space-around;
+}
 .price{
     color: indigo;
     font-size: 18px;
@@ -22,4 +26,11 @@
     padding: 4px 50px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px;
+}
+.star{
+    color:rgb(252, 165, 4);
+}
+.features-list{
+    color: rgb(75, 75, 75);
 }
