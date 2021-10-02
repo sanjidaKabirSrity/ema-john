@@ -24,7 +24,7 @@ const OrderCart = (props) => {
         <div className="order-cart">
             <div className="order-title">
                 <h3 className="order-summary">Order Summary</h3>
-                <p className="items-order">Items Ordered: {cart.length}</p>
+                <p className="items-order">Items Ordered: {quantity}</p>
             </div>
             <div className='price-calc'>
                 <div>
