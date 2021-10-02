@@ -4,10 +4,10 @@ import './OrderCart.css';
 const OrderCart = (props) => {
     const {cart} = props;
 
-    const total = cart.reduce((pre, curr) => pre + curr.price ,0)
-    // const total = cart.reduce((pre, curr) => pre + curr.price * curr.quantity ,0)
+    // const total = cart.reduce((pre, curr) => pre + curr.price ,0)
+    const total = cart.reduce((pre, curr) => pre + curr.price * curr.quantity ,0)
     const shipping = cart.reduce((pre, curr) => pre + curr.shipping ,0)
-    // const quantity = cart.reduce((pre, curr) => pre + curr.quantity ,0)
+    const quantity = cart.reduce((pre, curr) => pre + curr.quantity ,0)
 
     // let total = 0;
     // let shipping = 0;
@@ -19,6 +19,7 @@ const OrderCart = (props) => {
     const taxBeforeTotal = total + shipping;
     const tax = taxBeforeTotal/10;
     const grandTotal = taxBeforeTotal + tax;
+
     return (
         <div className="order-cart">
             <div className="order-title">
@@ -41,9 +42,7 @@ const OrderCart = (props) => {
                     <p className="total">${grandTotal.toFixed(2)}</p>
                 </div>
             </div>
-            <div className="order-btns">
-                <button className="order-btn">Review Your Order</button>
-            </div>
+            {props.children}
         </div>
     );
 };

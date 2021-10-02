@@ -12,7 +12,7 @@
 }
 .product-customize{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .price{
     color: indigo;
@@ -33,4 +33,7 @@
 }
 .features-list{
     color: rgb(75, 75, 75);
+}
+.rating-body{
+    width: 250px;
 }
