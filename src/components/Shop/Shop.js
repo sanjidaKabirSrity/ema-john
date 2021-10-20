@@ -13,7 +13,7 @@ const Shop = () => {
         const [searchProducts, serSearchProducts] =useState([]);
 
         useEffect(() => {
-            fetch('./products.JSON').then(res => res.json()).then(data => {
+            fetch('./products.json').then(res => res.json()).then(data => {
                 setProducts(data);
                 serSearchProducts(data);
             })

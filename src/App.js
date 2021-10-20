@@ -6,10 +6,15 @@ import Overview from './components/Overview/Overview';
 import Shop from './components/Shop/Shop';
 import NotFound from './components/NotFound/NotFound';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Shipping from './components/Shipping/Shipping';
 
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <BrowserRouter>
         <Heading/>
         <Switch>
@@ -22,18 +27,27 @@ function App() {
           <Route exact path="/order">
             <Overview/>
           </Route>
-          <Route exact path="/placeOrder">
+          <PrivateRoute exact path="/placeOrder">
             <PlaceOrder/>
-          </Route>
-          <Route exact path="/inventory">
+          </PrivateRoute>
+          <PrivateRoute exact path="/shipping">
+            <Shipping/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/inventory">
             <Inventory/>
+          </PrivateRoute>
+          <Route exact path="/signIn">
+            <Login/>
+          </Route>
+          <Route exact path="/register">
+            <Register/>
           </Route>
           <Route path="*">
             <NotFound/>
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 
